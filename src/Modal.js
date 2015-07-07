@@ -16,6 +16,9 @@ import Header from './ModalHeader';
 import Title from './ModalTitle';
 import Footer from './ModalFooter';
 
+import injectTapEventPlugin from 'react-tap-event-plugin';
+injectTapEventPlugin();
+
 
 /**
  * Gets the correct clientHeight of the modal container
@@ -211,7 +214,7 @@ const ModalMarkup = React.createClass({
         role="dialog"
         style={modalStyle}
         className={classNames(this.props.className, classes)}
-        onClick={this.props.backdrop === true ? this.handleBackdropClick : null}
+        onTouchTap={this.props.backdrop === true ? this.handleBackdropClick : null}
         ref="modal">
         <div className={classNames(this.props.dialogClassName, dialogClasses)}>
           <div className="modal-content" role='document'>
@@ -266,7 +269,7 @@ const ModalMarkup = React.createClass({
 
     return (
       <div>
-        <div className={classNames(classes)} ref="backdrop" onClick={onClick} />
+        <div className={classNames(classes)} ref="backdrop" onTouchTap={onClick} />
         {modal}
       </div>
     );

@@ -109,6 +109,8 @@
     "yargs": "^3.5.4"
   },
   "dependencies": {
-    "classnames": "^2.0.0"
+    "classnames": "^2.0.0",
+    "react": "^0.13.3",
+    "react-tap-event-plugin": "git+https://github.com/secondspectrum/react-tap-event-plugin.git"
   }
 }
